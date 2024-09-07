@@ -21,6 +21,22 @@ public class ScoreBoardTest {
         assertEquals(1, scoreBoard.getSummary().size());
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void testStartGameWithEmptyTeamName() {
+        scoreBoard.startGame("", "Canada");
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testStartGameWithSameTeamName() {
+        scoreBoard.startGame("Spain", "Spain");
+    }
+
+    @Test(expected = IllegalStateException.class)
+    public void testStartSameGameTwice() {
+        scoreBoard.startGame("Spain", "Brazil");
+        scoreBoard.startGame("Spain", "Brazil");
+    }
+
     @Test
     public void testUpdateScore() {
         scoreBoard.startGame("Mexico", "Canada");
@@ -28,11 +44,27 @@ public class ScoreBoardTest {
         assertEquals("Mexico 2 - 1 Canada", scoreBoard.getSummary().get(0).toString());
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void testUpdateScoreWithNegativeValues() {
+        scoreBoard.startGame("Germany", "France");
+        scoreBoard.updateScore("Germany", "France", -1, 2);
+    }
+
+    @Test(expected = IllegalStateException.class)
+    public void testUpdateScoreForNonExistentGame() {
+        scoreBoard.updateScore("Germany", "France", 1, 2);
+    }
+
     @Test
     public void testFinishGame() {
         scoreBoard.startGame("Mexico", "Canada");
         scoreBoard.finishGame("Mexico", "Canada");
         assertEquals(0, scoreBoard.getSummary().size());
+    }
+
+    @Test(expected = IllegalStateException.class)
+    public void testFinishNonExistentGame() {
+        scoreBoard.finishGame("Germany", "France");
     }
 
     @Test
@@ -59,5 +91,6 @@ public class ScoreBoardTest {
         assertEquals("Mexico 0 - 5 Canada", summary.get(2).toString());
         assertEquals("Germany 2 - 2 France", summary.get(3).toString());
         assertEquals("Argentina 3 - 1 Australia", summary.get(4).toString());
+
     }
 }
