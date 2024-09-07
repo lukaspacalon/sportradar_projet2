@@ -2,7 +2,9 @@ package com.sportdata;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class ScoreBoard {
@@ -34,14 +36,15 @@ public class ScoreBoard {
         if (homeScore < 0 || awayScore < 0) {
             throw new IllegalArgumentException("Scores must be non-negative");
         }
-        games.stream()
+        Optional<Game> gameOpt = games.stream()
                 .filter(game -> game.getHomeTeam().equals(homeTeam) && game.getAwayTeam().equals(awayTeam))
-                .findFirst()
-                .ifPresentOrElse(
-                        game -> game.updateScore(homeScore, awayScore),
-                        () -> {
-                            throw new IllegalStateException("Game not found on the scoreboard");
-                        });
+                .findFirst();
+
+        if (gameOpt.isPresent()) {
+            gameOpt.get().updateScore(homeScore, awayScore);
+        } else {
+            throw new IllegalStateException("Game not found on the scoreboard");
+        }
     }
 
     public void finishGame(String homeTeam, String awayTeam) {

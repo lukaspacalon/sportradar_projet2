@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.sportdata.ScoreBoardTest" time="0.057" tests="10" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.sportdata.ScoreBoardTest" time="0.052" tests="10" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="20"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="FR"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-20\bin"/>
-    <property name="sun.java.command" value="C:\Users\User\AppData\Local\Temp\surefire11801219356754554447\surefirebooter-20240907155913951_3.jar C:\Users\User\AppData\Local\Temp\surefire11801219356754554447 2024-09-07T15-59-13_827-jvmRun1 surefire-20240907155913951_1tmp surefire_0-20240907155913951_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\User\AppData\Local\Temp\surefire7434690632701708892\surefirebooter-20240907160215633_3.jar C:\Users\User\AppData\Local\Temp\surefire7434690632701708892 2024-09-07T16-02-15_521-jvmRun1 surefire-20240907160215633_1tmp surefire_0-20240907160215633_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\User\Documents\GitHub\sportradar\football-scoreboard\football-scoreboard\target\test-classes;C:\Users\User\Documents\GitHub\sportradar\football-scoreboard\football-scoreboard\target\classes;C:\Users\User\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\User\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\User\AppData\Local\Temp\surefire11801219356754554447\surefirebooter-20240907155913951_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\User\AppData\Local\Temp\surefire7434690632701708892\surefirebooter-20240907160215633_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="20.0.1+9-29"/>
@@ -60,9 +60,9 @@
   </properties>
   <testcase name="testStartGameWithSameTeamName" classname="com.sportdata.ScoreBoardTest" time="0.003"/>
   <testcase name="testStartGameWithEmptyTeamName" classname="com.sportdata.ScoreBoardTest" time="0"/>
-  <testcase name="testGetSummary" classname="com.sportdata.ScoreBoardTest" time="0.01"/>
+  <testcase name="testGetSummary" classname="com.sportdata.ScoreBoardTest" time="0.005"/>
   <testcase name="testUpdateScoreWithNegativeValues" classname="com.sportdata.ScoreBoardTest" time="0"/>
-  <testcase name="testStartGame" classname="com.sportdata.ScoreBoardTest" time="0.001"/>
+  <testcase name="testStartGame" classname="com.sportdata.ScoreBoardTest" time="0"/>
   <testcase name="testUpdateScore" classname="com.sportdata.ScoreBoardTest" time="0"/>
   <testcase name="testStartSameGameTwice" classname="com.sportdata.ScoreBoardTest" time="0"/>
   <testcase name="testFinishNonExistentGame" classname="com.sportdata.ScoreBoardTest" time="0.001"/>

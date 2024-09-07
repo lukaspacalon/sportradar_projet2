@@ -1,4 +1,5 @@
 com\sportdata\Game.class
 com\sportdata\ScoreBoard.class
 com\sportdata\App.class
+com\sportdata\Game$Score.class
 com\sportdata\Score.class
