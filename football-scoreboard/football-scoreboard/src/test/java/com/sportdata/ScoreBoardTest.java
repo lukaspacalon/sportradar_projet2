@@ -12,7 +12,7 @@ public class ScoreBoardTest {
 
     @Before
     public void setUp() {
-        scoreBoard = new ScoreBoard();
+        scoreBoard = new ScoreBoard(new InMemoryGameRepository());
     }
 
     @Test

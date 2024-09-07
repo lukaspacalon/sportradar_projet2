@@ -1,6 +1,5 @@
 package com.sportdata;
 
-import java.time.LocalDateTime;
 import java.util.Date;
 
 public class Game {
@@ -15,7 +14,7 @@ public class Game {
         this.awayTeam = awayTeam;
         this.homeScore = 0;
         this.awayScore = 0;
-        this.startTime = new Date(); // Capture the start time when the game is created
+        this.startTime = new Date();
     }
 
     public String getHomeTeam() {
@@ -31,8 +30,8 @@ public class Game {
         this.awayScore = awayScore;
     }
 
-    public Score getScore() {
-        return new Score(homeScore, awayScore);
+    public int getTotalScore() {
+        return homeScore + awayScore;
     }
 
     public Date getStartTime() {
@@ -42,19 +41,5 @@ public class Game {
     @Override
     public String toString() {
         return homeTeam + " " + homeScore + " - " + awayScore + " " + awayTeam;
-    }
-
-    public static class Score {
-        private final int homeScore;
-        private final int awayScore;
-
-        public Score(int homeScore, int awayScore) {
-            this.homeScore = homeScore;
-            this.awayScore = awayScore;
-        }
-
-        public int getTotalScore() {
-            return homeScore + awayScore;
-        }
     }
 }

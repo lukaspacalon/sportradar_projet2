@@ -1,5 +1,6 @@
 com\sportdata\Game.class
 com\sportdata\ScoreBoard.class
+com\sportdata\InMemoryGameRepository.class
 com\sportdata\App.class
-com\sportdata\Game$Score.class
+com\sportdata\GameRepository.class
 com\sportdata\Score.class

@@ -6,7 +6,11 @@ package com.sportdata;
  */
 public class App {
     public static void main(String[] args) {
-        ScoreBoard scoreBoard = new ScoreBoard();
+        // Create an instance of InMemoryGameRepository
+        GameRepository gameRepository = new InMemoryGameRepository();
+
+        // Create an instance of ScoreBoard with the repository
+        ScoreBoard scoreBoard = new ScoreBoard(gameRepository);
 
         // Start games
         scoreBoard.startGame("Mexico", "Canada");
