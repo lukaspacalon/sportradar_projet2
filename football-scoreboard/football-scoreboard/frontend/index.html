@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football World Cup Scoreboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Football World Cup Scoreboard</h1>
+
+    <div>
+        <h2>Start a New Game</h2>
+        <input type="text" id="homeTeam" placeholder="Home Team">
+        <input type="text" id="awayTeam" placeholder="Away Team">
+        <button onclick="startGame()">Start Game</button>
+    </div>
+
+    <div>
+        <h2>Update Score</h2>
+        <input type="text" id="updateHomeTeam" placeholder="Home Team">
+        <input type="text" id="updateAwayTeam" placeholder="Away Team">
+        <input type="number" id="homeScore" placeholder="Home Score">
+        <input type="number" id="awayScore" placeholder="Away Score">
+        <button onclick="updateScore()">Update Score</button>
+    </div>
+
+    <div>
+        <h2>Finish a Game</h2>
+        <input type="text" id="finishHomeTeam" placeholder="Home Team">
+        <input type="text" id="finishAwayTeam" placeholder="Away Team">
+        <button onclick="finishGame()">Finish Game</button>
+    </div>
+
+    <div>
+        <h2>Summary</h2>
+        <button onclick="getSummary()">Get Summary</button>
+        <ul id="summaryList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

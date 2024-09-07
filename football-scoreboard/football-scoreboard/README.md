@@ -98,3 +98,27 @@ Thanks to the Football World Cup for the inspiration!
 5. **Code Structure**: Detailed the directory structure and key classes.
 
 This updated `README.md` gives a clear, comprehensive overview of the project and its usage, improving usability and maintainability.
+
+
+### Structure
+
+football-scoreboard/
+├── src/
+│   ├── main/
+│   │   └── java/
+│   │       └── com/
+│   │           └── sportdata/
+│   │               ├── App.java
+│   │               ├── Game.java
+│   │               ├── GameRepository.java
+│   │               ├── InMemoryGameRepository.java
+│   │               └── ScoreBoard.java
+│   └── test/
+│       └── java/
+│           └── com/
+│               └── sportdata/
+│                   └── ScoreBoardTest.java
+└── frontend/
+    ├── index.html
+    ├── script.js
+    └── styles.css
