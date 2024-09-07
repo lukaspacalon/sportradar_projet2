@@ -6,13 +6,47 @@
 <body>
     <h1>Start a New Football Game</h1>
     <form action="#" th:action="@{/start-game}" th:object="${gameForm}" method="post">
-        <label for="homeTeam">Home Team:</label>
-        <input type="text" id="homeTeam" name="homeTeam" th:field="*{homeTeam}" required>
-        <br/>
-        <label for="awayTeam">Away Team:</label>
-        <input type="text" id="awayTeam" name="awayTeam" th:field="*{awayTeam}" required>
-        <br/>
-        <button type="submit">Start Game</button>
+    <label for="homeTeam">Home Team:</label>
+    <input type="text" id="homeTeam" name="homeTeam" th:field="*{homeTeam}" required>
+    <br/>
+    <label for="awayTeam">Away Team:</label>
+    <input type="text" id="awayTeam" name="awayTeam" th:field="*{awayTeam}" required>
+    <br/>
+    <button type="button" id="startGameButton">Start Game</button>
     </form>
+
+    <div id="gameInfo" style="display: none;">
+    <p>Home Team: <span th:text="${gameForm.homeTeam}"></span></p>
+    <p>Away Team: <span th:text="${gameForm.awayTeam}"></span></p>
+    <p>Score: <span id="homeScore">0</span> - <span id="awayScore">0</span></p>
+    <input type="number" id="updatedHomeScore">
+    <input type="number" id="updatedAwayScore">
+    <button type="button" id="updateScoreButton">Update Score</button>
+    <button type="button" id="finishGameButton">Finish Game</button>
+
+    <script>
+        document.getElementById('startGameButton').addEventListener('click', function() {
+        // Get team names and display game information
+        var homeTeam = document.getElementById('homeTeam').value;
+        var awayTeam = document.getElementById('awayTeam').value;
+        document.getElementById('gameInfo').style.display = 'block';
+        document.getElementById('gameInfo').querySelector('span[th:text="${gameForm.homeTeam}"]').textContent = homeTeam;
+        document.getElementById('gameInfo').querySelector('span[th:text="${gameForm.awayTeam}"]').textContent = awayTeam;
+        });
+
+        document.getElementById('updateScoreButton').addEventListener('click', function() {
+        // Get updated scores and update displayed values
+        var updatedHomeScore = document.getElementById('updatedHomeScore').value;
+        var updatedAwayScore = document.getElementById('updatedAwayScore').value;
+        document.getElementById('homeScore').textContent = updatedHomeScore;
+        document.getElementById('awayScore').textContent = updatedAwayScore;
+        });
+
+        document.getElementById('finishGameButton').addEventListener('click', function() {
+        // Remove game information section
+        document.getElementById('gameInfo').remove();
+        });
+    </script>
+    </div>
 </body>
 </html>
