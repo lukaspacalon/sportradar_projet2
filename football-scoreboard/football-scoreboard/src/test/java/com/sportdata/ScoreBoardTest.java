@@ -54,10 +54,10 @@ public class ScoreBoardTest {
 
         List<Game> summary = scoreBoard.getSummary();
 
-        assertEquals("Uruguay 6 - 6 Italy", summary.get(0).toString());
-        assertEquals("Spain 10 - 2 Brazil", summary.get(1).toString());
+        assertEquals("Spain 10 - 2 Brazil", summary.get(0).toString());
+        assertEquals("Uruguay 6 - 6 Italy", summary.get(1).toString());
         assertEquals("Mexico 0 - 5 Canada", summary.get(2).toString());
-        assertEquals("Argentina 3 - 1 Australia", summary.get(3).toString());
-        assertEquals("Germany 2 - 2 France", summary.get(4).toString());
+        assertEquals("Germany 2 - 2 France", summary.get(3).toString());
+        assertEquals("Argentina 3 - 1 Australia", summary.get(4).toString());
     }
 }
